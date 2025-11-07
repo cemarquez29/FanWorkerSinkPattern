@@ -22,9 +22,9 @@ Colección de ejemplo: [Descargar colección](./PruebaINGPLATAFORMAS.postman_col
   **Ejemplo de petición:**
   ```json
   {
-    "batchSize": 10,
-    "rangeStart": 1,
-    "rangeEnd": 100
+    "size": 10,
+    "min": 1,
+    "max": 100
   }
 
 - **POST `/result`**  
