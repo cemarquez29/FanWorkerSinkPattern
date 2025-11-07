@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-worker-processor-service
+  namespace: fanworkersink
+spec:
+  selector: { app: ms-worker-processor }
+  ports: [{ port: 80, targetPort: 8080 }]

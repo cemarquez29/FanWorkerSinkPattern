@@ -16,6 +16,8 @@ management:
     web:
       exposure:
         include: "health,prometheus"
+  server:
+    port: 8080
   endpoint:
     health:
       probes:
@@ -23,8 +25,8 @@ management:
 entrypoint:
   sqs:
     region: "us-east-1"
-    endpoint: "http://localhost:4566"
-    queueUrl: "http://localhost:4566/000000000000/numbers"
+    queueUrl: "${SQS-QUEUE-URL:http://localhost:4566/000000000000/numbers}"
+    endpoint: "${SQS-ENDPOINT:http://localhost:4566}"
     waitTimeSeconds: 20
     maxNumberOfMessages: 10
     visibilityTimeoutSeconds: 10
@@ -32,5 +34,5 @@ entrypoint:
 adapter:
   sqs:
     region: "us-east-1"
-    queueUrl: "http://localhost:4566/000000000000/numbers-squared"
-    endpoint: "http://localhost:4566"
+    queueUrl: "${SQS-ADAPTER-QUEUE-URL:http://localhost:4566/000000000000/numbers-squared}"
+    endpoint: "${SQS-ENDPOINT:http://localhost:4566}"

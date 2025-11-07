@@ -15,7 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class CreateBatchUseCase {
     private final SqsSenderGateway sqsSenderGateway;
 
-    public Mono<Void> createBatch(CreateBatchModel model) {
+    public Mono<String> createBatch(CreateBatchModel model) {
         final String batchId = generateBatchId();
 
         return Flux.range(1, model.getSize())
@@ -26,7 +26,7 @@ public class CreateBatchUseCase {
                         String.valueOf(LocalDateTime.now())
                 ))
                 .flatMap(sqsSenderGateway::send,  16)
-                .then(Mono.empty());
+                .then(Mono.just(batchId));
     }
 
     private static int randomBetween(int min, int max) {

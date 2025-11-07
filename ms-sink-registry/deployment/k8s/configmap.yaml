@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ms-sink-registry-configmap
+  namespace: fanworkersink
+data:
+  AWS_REGION: "us-east-1"
+  AWS_ACCESS_KEY_ID: "test"
+  AWS_SECRET_ACCESS_KEY: "test"
+  AWS_ENDPOINT: "http://localstack.fanworkersink.svc.cluster.local:4566"
+  DYNAMO-ENDPOINT: "http://localstack.fanworkersink.svc.cluster.local:4566"
+  SQS-ENDPOINT: "http://localstack.fanworkersink.svc.cluster.local:4566"
+  SQS-QUEUE-URL: "http://localstack.fanworkersink.svc.cluster.local:4566/000000000000/numbers-squared"

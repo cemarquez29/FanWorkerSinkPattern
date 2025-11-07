@@ -22,13 +22,13 @@ management:
         enabled: true
 aws:
   dynamodb:
-    endpoint: "http://localhost:8010"
+    endpoint: "${DYNAMO-ENDPOINT:http://localhost:8010}"
   region: "us-east-1"
 table-name: "squared-batch-registry"
 adapter:
   sqs:
     region: "us-east-1"
-    queueUrl: "http://localhost:4566/000000000000/numbers"
-    endpoint: "http://localhost:4566"
+    queueUrl: "${SQS-QUEUE-URL:http://localhost:4566/000000000000/numbers}"
+    endpoint: "${SQS-ENDPOINT:http://localhost:4566}"
 cors:
   allowed-origins: "http://localhost:4200,http://localhost:8080"

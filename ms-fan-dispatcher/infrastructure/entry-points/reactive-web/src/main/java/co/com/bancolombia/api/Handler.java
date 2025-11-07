@@ -23,9 +23,9 @@ public class Handler {
         return CreateBatchRequestBuilder.getDataFromRequest(serverRequest, validationRequest)
                 .map(CreateBatchRequestMapper::dtoToModel)
                 .flatMap(createBatchUseCase::createBatch)
-                .then(ServerResponse.ok().bodyValue(
+                .flatMap(response -> ServerResponse.ok().bodyValue(
                         CreateBatchResponseDTO.builder()
-                                .result("Se crearon correctamente!")
+                                .result("Se crearon correctamente! para " + response )
                                 .build()));
     }
 

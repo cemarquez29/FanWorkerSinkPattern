@@ -1,8 +1,8 @@
 server:
-  port: 8081
+  port: 8080
 spring:
   application:
-    name: "ms-worker-processor"
+    name: "ms-sink-registry"
   devtools:
     add-properties: false
   h2:
@@ -23,14 +23,14 @@ management:
 entrypoint:
   sqs:
     region: "us-east-1"
-    endpoint: "http://localhost:4566"
-    queueUrl: "http://localhost:4566/000000000000/numbers-squared"
+    queueUrl: "${SQS-QUEUE-URL:http://localhost:4566/000000000000/numbers}"
+    endpoint: "${SQS-ENDPOINT:http://localhost:4566}"
     waitTimeSeconds: 20
     maxNumberOfMessages: 10
     visibilityTimeoutSeconds: 10
     numberOfThreads: 1
 aws:
   dynamodb:
-    endpoint: "http://localhost:8010"
+    endpoint: "${DYNAMO-ENDPOINT:http://localhost:8010}"
   region: "us-east-1"
 table-name: squared-batch-registry

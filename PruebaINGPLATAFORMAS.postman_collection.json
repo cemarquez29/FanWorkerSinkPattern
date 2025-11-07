@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "88607d81-8969-4867-901e-2c5f1ce52d53",
+		"name": "Prueba ING PLATAFORMAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28698661"
+	},
+	"item": [
+		{
+			"name": "Results kube",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id-consumer",
+						"value": "PRODUCTORCONSUMIDOR",
+						"type": "text"
+					},
+					{
+						"key": "message-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Imd3LWRlcG9zaXRvcy1qd3QtcWEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2d3LWRlcG9zaXRvcy1xYS5hcHBzLmFtYmllbnRlc2JjLmxhYiIsInN1YiI6ImFwaS1jb25uZWN0LXBvY2tldFRyYW5zYWN0aW9uIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwiY2xpZW50X2lkIjoiYXBpLWNvbm5lY3QtcG9ja2V0VHJhbnNhY3Rpb24iLCJzY29wZSI6InBvY2tldFRyYW5zYWN0aW9uIiwiZXhwIjo5OTk5OTk5OTk5Ljk5OSwiaWF0Ijo5OTk5OTk5OTk5Ljk5OX0.GMsU2XXGnvqgtdORT_t6gTkpju-W446jSBACTgssVFlHed61V9A49SBniNZXaRdwSRZvQmr1msB9TWDf7E73q8yPnrm_9wfCbwZQ__nRvuEq9Bq8I4Ffj_GZ0spCuB6zoojdkDbB9zZpxBn-MAlZXaDIUKyDrfLsj50qy0I6U5ebpyek5fbnQGD9nmsqCMErzS9VK7l3IeWxXKJ0JKYq61ueSyKiwqD-U76p9uqGHoL9z3BHqbAZrG6ZF_UdDkPvqt5Kwubs8tkvPdtBs2zgtx-9X70fqvU2t6qaT1jBAvkG6PfFcVRuG1ZefD-Np8Z2q2Fz8ANMOFK57JQj0RAogA",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "id-token",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Imd3LWRlcG9zaXRvcy1qd3QtcWEiLCJ0eXAiOiJKV1QifQ.eyJhdXRoZW50aWNhdGlvbiI6eyJzZWdtZW50IjoiIiwiYWNjZXNzX3Rva2VuIjoiQmRZLWVpaHhCZDZxOWxxdEFicWkxdk05YndGZWxJdEhtQk9MIiwiYXV0aF9tb2RlIjoiUE4iLCJhdXRoX3RpbWUiOiIyMDI1LzA1LzIyIDEwOjQ5OjE3In0sImlkZW50aXR5Ijp7Im5hbWUiOiJNQVJJQSBBTkdFTCBQVUxHQVJJTiAgIiwiZG9jIjoiVElQRE9DX0ZTMDAxIiwiY2lkIjoiVThGRjEyMUUwQkREODRGM0RCOTQwNzVCRTg4OEMzMjhDIiwibnVtIjoiMTk5OTA0MDkxOCIsImFpZCI6IiIsImRvY19vcmlnaW5hbCI6IkNDIiwibWRtIjoiMzEwNzcyOTQiLCJ1c3JfdHlwZSI6IkNMSUVOVEUifSwiYWRkaXRpb25hbF9kYXRhIjp7fSwiYXV0aG9yaXphdGlvbiI6eyJzdGF0ZSI6IiIsInJvbCI6IiIsIm93bmVyX251bSI6IiIsIm93bmVyX2RvYyI6IiIsImVudGl0bGVtZW50IjoiIn0sImF1ZCI6Ik1DRSIsImV4cCI6NTM1NjQ5OTM1OS45MTksImlhdCI6MTc1NjQ5OTM1OS45MTksImlzcyI6Imh0dHBzOi8vZ3ctZGVwb3NpdG9zLXFhLmFwcHMuYW1iaWVudGVzYmMubGFiIiwianRpIjoiMzEwdTg4MTFkN2t1YWRxaTJvMDExZ28xIiwibmJmIjoxNzQ3OTI4OTU3LCJzdWIiOiJVOEZGMTIxRTBCREQ4NEYzREI5NDA3NUJFODg4QzMyOEMifQ.XOq3XfL32gl7iHg1t2ehW7VsdmURbX4EuXEfIDfoNDn2U6XT0X8fTLjpTJgoVs4O2ZIvaUvvSp4tl1NTJHTIHx4ANymS3fSaMgvd_27BUK4Xn8Xx-cylv5schXPzpDg5s6T4gHBMHYQRiHtqzoFoRyLlbqXLaIz3Yw-j-4vthbOhXP17OPPgno0c9s1aavIKRo7BcHxWASKDDcFyeLQcPx35bYPZ5875bEjzUdgYbjOdI6mdF_Zcw_P1qyGgCfl30sXFuVCR8fmBow9cg0wBnloZXISEPhVNAt8NEyLMZXV7qPA27PcllVkWceqsZFzjoUKFsDKwK9F33iNCfQBljQ",
+						"type": "text"
+					},
+					{
+						"key": "client-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"account\": {\r\n      \"type\": \"SVGS\",\r\n      \"number\": \"40670918765\",\r\n      \"pocket\": {\r\n        \"status\": \"ACTIVO\"\r\n      }\r\n    }\r\n  },\r\n  \"pagination\": {\r\n    \"pageSize\": 3,\r\n    \"pageNumber\": 1\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:45551/api/fan/result?batchId=BATCH-20251107-033704-ac63fb44",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "45551",
+					"path": [
+						"api",
+						"fan",
+						"result"
+					],
+					"query": [
+						{
+							"key": "batchId",
+							"value": "BATCH-20251107-033704-ac63fb44"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Results local",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id-consumer",
+						"value": "PRODUCTORCONSUMIDOR",
+						"type": "text"
+					},
+					{
+						"key": "message-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Imd3LWRlcG9zaXRvcy1qd3QtcWEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2d3LWRlcG9zaXRvcy1xYS5hcHBzLmFtYmllbnRlc2JjLmxhYiIsInN1YiI6ImFwaS1jb25uZWN0LXBvY2tldFRyYW5zYWN0aW9uIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwiY2xpZW50X2lkIjoiYXBpLWNvbm5lY3QtcG9ja2V0VHJhbnNhY3Rpb24iLCJzY29wZSI6InBvY2tldFRyYW5zYWN0aW9uIiwiZXhwIjo5OTk5OTk5OTk5Ljk5OSwiaWF0Ijo5OTk5OTk5OTk5Ljk5OX0.GMsU2XXGnvqgtdORT_t6gTkpju-W446jSBACTgssVFlHed61V9A49SBniNZXaRdwSRZvQmr1msB9TWDf7E73q8yPnrm_9wfCbwZQ__nRvuEq9Bq8I4Ffj_GZ0spCuB6zoojdkDbB9zZpxBn-MAlZXaDIUKyDrfLsj50qy0I6U5ebpyek5fbnQGD9nmsqCMErzS9VK7l3IeWxXKJ0JKYq61ueSyKiwqD-U76p9uqGHoL9z3BHqbAZrG6ZF_UdDkPvqt5Kwubs8tkvPdtBs2zgtx-9X70fqvU2t6qaT1jBAvkG6PfFcVRuG1ZefD-Np8Z2q2Fz8ANMOFK57JQj0RAogA",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "id-token",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Imd3LWRlcG9zaXRvcy1qd3QtcWEiLCJ0eXAiOiJKV1QifQ.eyJhdXRoZW50aWNhdGlvbiI6eyJzZWdtZW50IjoiIiwiYWNjZXNzX3Rva2VuIjoiQmRZLWVpaHhCZDZxOWxxdEFicWkxdk05YndGZWxJdEhtQk9MIiwiYXV0aF9tb2RlIjoiUE4iLCJhdXRoX3RpbWUiOiIyMDI1LzA1LzIyIDEwOjQ5OjE3In0sImlkZW50aXR5Ijp7Im5hbWUiOiJNQVJJQSBBTkdFTCBQVUxHQVJJTiAgIiwiZG9jIjoiVElQRE9DX0ZTMDAxIiwiY2lkIjoiVThGRjEyMUUwQkREODRGM0RCOTQwNzVCRTg4OEMzMjhDIiwibnVtIjoiMTk5OTA0MDkxOCIsImFpZCI6IiIsImRvY19vcmlnaW5hbCI6IkNDIiwibWRtIjoiMzEwNzcyOTQiLCJ1c3JfdHlwZSI6IkNMSUVOVEUifSwiYWRkaXRpb25hbF9kYXRhIjp7fSwiYXV0aG9yaXphdGlvbiI6eyJzdGF0ZSI6IiIsInJvbCI6IiIsIm93bmVyX251bSI6IiIsIm93bmVyX2RvYyI6IiIsImVudGl0bGVtZW50IjoiIn0sImF1ZCI6Ik1DRSIsImV4cCI6NTM1NjQ5OTM1OS45MTksImlhdCI6MTc1NjQ5OTM1OS45MTksImlzcyI6Imh0dHBzOi8vZ3ctZGVwb3NpdG9zLXFhLmFwcHMuYW1iaWVudGVzYmMubGFiIiwianRpIjoiMzEwdTg4MTFkN2t1YWRxaTJvMDExZ28xIiwibmJmIjoxNzQ3OTI4OTU3LCJzdWIiOiJVOEZGMTIxRTBCREQ4NEYzREI5NDA3NUJFODg4QzMyOEMifQ.XOq3XfL32gl7iHg1t2ehW7VsdmURbX4EuXEfIDfoNDn2U6XT0X8fTLjpTJgoVs4O2ZIvaUvvSp4tl1NTJHTIHx4ANymS3fSaMgvd_27BUK4Xn8Xx-cylv5schXPzpDg5s6T4gHBMHYQRiHtqzoFoRyLlbqXLaIz3Yw-j-4vthbOhXP17OPPgno0c9s1aavIKRo7BcHxWASKDDcFyeLQcPx35bYPZ5875bEjzUdgYbjOdI6mdF_Zcw_P1qyGgCfl30sXFuVCR8fmBow9cg0wBnloZXISEPhVNAt8NEyLMZXV7qPA27PcllVkWceqsZFzjoUKFsDKwK9F33iNCfQBljQ",
+						"type": "text"
+					},
+					{
+						"key": "client-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"account\": {\r\n      \"type\": \"SVGS\",\r\n      \"number\": \"40670918765\",\r\n      \"pocket\": {\r\n        \"status\": \"ACTIVO\"\r\n      }\r\n    }\r\n  },\r\n  \"pagination\": {\r\n    \"pageSize\": 3,\r\n    \"pageNumber\": 1\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/fan/result?batchId=BATCH-20251106-174410-7cefca65",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fan",
+						"result"
+					],
+					"query": [
+						{
+							"key": "batchId",
+							"value": "BATCH-20251106-174410-7cefca65"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Batch",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "id-consumer",
+						"value": "PRODUCTORCONSUMIDOR",
+						"type": "text"
+					},
+					{
+						"key": "message-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Imd3LWRlcG9zaXRvcy1qd3QtcWEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2d3LWRlcG9zaXRvcy1xYS5hcHBzLmFtYmllbnRlc2JjLmxhYiIsInN1YiI6ImFwaS1jb25uZWN0LXBvY2tldFRyYW5zYWN0aW9uIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwiY2xpZW50X2lkIjoiYXBpLWNvbm5lY3QtcG9ja2V0VHJhbnNhY3Rpb24iLCJzY29wZSI6InBvY2tldFRyYW5zYWN0aW9uIiwiZXhwIjo5OTk5OTk5OTk5Ljk5OSwiaWF0Ijo5OTk5OTk5OTk5Ljk5OX0.GMsU2XXGnvqgtdORT_t6gTkpju-W446jSBACTgssVFlHed61V9A49SBniNZXaRdwSRZvQmr1msB9TWDf7E73q8yPnrm_9wfCbwZQ__nRvuEq9Bq8I4Ffj_GZ0spCuB6zoojdkDbB9zZpxBn-MAlZXaDIUKyDrfLsj50qy0I6U5ebpyek5fbnQGD9nmsqCMErzS9VK7l3IeWxXKJ0JKYq61ueSyKiwqD-U76p9uqGHoL9z3BHqbAZrG6ZF_UdDkPvqt5Kwubs8tkvPdtBs2zgtx-9X70fqvU2t6qaT1jBAvkG6PfFcVRuG1ZefD-Np8Z2q2Fz8ANMOFK57JQj0RAogA",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "id-token",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Imd3LWRlcG9zaXRvcy1qd3QtcWEiLCJ0eXAiOiJKV1QifQ.eyJhdXRoZW50aWNhdGlvbiI6eyJzZWdtZW50IjoiIiwiYWNjZXNzX3Rva2VuIjoiQmRZLWVpaHhCZDZxOWxxdEFicWkxdk05YndGZWxJdEhtQk9MIiwiYXV0aF9tb2RlIjoiUE4iLCJhdXRoX3RpbWUiOiIyMDI1LzA1LzIyIDEwOjQ5OjE3In0sImlkZW50aXR5Ijp7Im5hbWUiOiJNQVJJQSBBTkdFTCBQVUxHQVJJTiAgIiwiZG9jIjoiVElQRE9DX0ZTMDAxIiwiY2lkIjoiVThGRjEyMUUwQkREODRGM0RCOTQwNzVCRTg4OEMzMjhDIiwibnVtIjoiMTk5OTA0MDkxOCIsImFpZCI6IiIsImRvY19vcmlnaW5hbCI6IkNDIiwibWRtIjoiMzEwNzcyOTQiLCJ1c3JfdHlwZSI6IkNMSUVOVEUifSwiYWRkaXRpb25hbF9kYXRhIjp7fSwiYXV0aG9yaXphdGlvbiI6eyJzdGF0ZSI6IiIsInJvbCI6IiIsIm93bmVyX251bSI6IiIsIm93bmVyX2RvYyI6IiIsImVudGl0bGVtZW50IjoiIn0sImF1ZCI6Ik1DRSIsImV4cCI6NTM1NjQ5OTM1OS45MTksImlhdCI6MTc1NjQ5OTM1OS45MTksImlzcyI6Imh0dHBzOi8vZ3ctZGVwb3NpdG9zLXFhLmFwcHMuYW1iaWVudGVzYmMubGFiIiwianRpIjoiMzEwdTg4MTFkN2t1YWRxaTJvMDExZ28xIiwibmJmIjoxNzQ3OTI4OTU3LCJzdWIiOiJVOEZGMTIxRTBCREQ4NEYzREI5NDA3NUJFODg4QzMyOEMifQ.XOq3XfL32gl7iHg1t2ehW7VsdmURbX4EuXEfIDfoNDn2U6XT0X8fTLjpTJgoVs4O2ZIvaUvvSp4tl1NTJHTIHx4ANymS3fSaMgvd_27BUK4Xn8Xx-cylv5schXPzpDg5s6T4gHBMHYQRiHtqzoFoRyLlbqXLaIz3Yw-j-4vthbOhXP17OPPgno0c9s1aavIKRo7BcHxWASKDDcFyeLQcPx35bYPZ5875bEjzUdgYbjOdI6mdF_Zcw_P1qyGgCfl30sXFuVCR8fmBow9cg0wBnloZXISEPhVNAt8NEyLMZXV7qPA27PcllVkWceqsZFzjoUKFsDKwK9F33iNCfQBljQ",
+						"type": "text"
+					},
+					{
+						"key": "client-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"size\": 100,\r\n  \"min\": 1,\r\n  \"max\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:45551/api/fan/create-batch",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "45551",
+					"path": [
+						"api",
+						"fan",
+						"create-batch"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
