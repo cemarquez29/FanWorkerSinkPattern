@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-sink-registry-service
+  namespace: fanworkersink
+spec:
+  selector: { app: ms-sink-registry }
+  ports: [{ port: 80, targetPort: 8080 }]

@@ -1,0 +1,36 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "ms-sink-registry"
+  devtools:
+    add-properties: false
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  profiles:
+    include: null
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+  endpoint:
+    health:
+      probes:
+        enabled: true
+entrypoint:
+  sqs:
+    region: "us-east-1"
+    queueUrl: "${SQS-QUEUE-URL:http://localhost:4566/000000000000/numbers}"
+    endpoint: "${SQS-ENDPOINT:http://localhost:4566}"
+    waitTimeSeconds: 20
+    maxNumberOfMessages: 10
+    visibilityTimeoutSeconds: 10
+    numberOfThreads: 1
+aws:
+  dynamodb:
+    endpoint: "${DYNAMO-ENDPOINT:http://localhost:8010}"
+  region: "us-east-1"
+table-name: squared-batch-registry

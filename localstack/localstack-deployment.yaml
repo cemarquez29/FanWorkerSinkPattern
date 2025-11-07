@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: localstack
+  namespace: fanworkersink
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: localstack }
+  template:
+    metadata:
+      labels: { app: localstack }
+    spec:
+      containers:
+        - name: localstack
+          image: localstack/localstack:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - { name: SERVICES, value: "sqs,dynamodb" }
+            - { name: DEBUG, value: "1" }
+            - { name: AWS_DEFAULT_REGION, value: "us-east-1" }
+          ports:
+            - { containerPort: 4566, name: edge }
+          volumeMounts:
+            - name: init-scripts
+              mountPath: /etc/localstack/init/ready.d
+      volumes:
+        - name: init-scripts
+          configMap:
+            name: localstack-init
+            defaultMode: 0755

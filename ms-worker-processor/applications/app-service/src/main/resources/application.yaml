@@ -1,0 +1,38 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "ms-worker-processor"
+  devtools:
+    add-properties: false
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  profiles:
+    include: null
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+  server:
+    port: 8080
+  endpoint:
+    health:
+      probes:
+        enabled: true
+entrypoint:
+  sqs:
+    region: "us-east-1"
+    queueUrl: "${SQS-QUEUE-URL:http://localhost:4566/000000000000/numbers}"
+    endpoint: "${SQS-ENDPOINT:http://localhost:4566}"
+    waitTimeSeconds: 20
+    maxNumberOfMessages: 10
+    visibilityTimeoutSeconds: 10
+    numberOfThreads: 1
+adapter:
+  sqs:
+    region: "us-east-1"
+    queueUrl: "${SQS-ADAPTER-QUEUE-URL:http://localhost:4566/000000000000/numbers-squared}"
+    endpoint: "${SQS-ENDPOINT:http://localhost:4566}"
